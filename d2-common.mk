@@ -29,6 +29,10 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
 # Audio configuration
 PRODUCT_COPY_FILES += \
 	device/samsung/d2-common/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
@@ -80,8 +84,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.snapshot_disabled=1 \
     com.qc.hardware=true \
-    com.qc.hdmi_out=true \
-    ro.hdmi.enable=true \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.gps.qmienabled=true \
     ro.telephony.call_ring.multiple=0 \
@@ -96,11 +98,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.emmc.sdcard.partition=17 \
     ro.use_data_netmgrd=true \
     persist.data_netmgrd_nint=16 \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-http=true \
-    media.stagefright.enable-fma2dp=false \
-    media.stagefright.enable-aac=true \
-    media.stagefright.enable-qcp=true \
     lpa.decode=false \
     lpa.use-stagefright=false \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \

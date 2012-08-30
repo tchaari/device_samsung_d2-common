@@ -29,6 +29,7 @@ USE_CAMERA_STUB := true
 -include device/samsung/msm8960-common/BoardConfigCommon.mk
 
 # Kernel
+TARGET_KERNEL_SOURCE        := kernel/samsung/d2
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31
 BOARD_KERNEL_BASE           := 0x80200000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81500000
@@ -63,4 +64,7 @@ TARGET_NO_INITLOGO := true
 #BOARD_USE_SAMSUNG_SEPARATEDSTREAM := true
 #BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 #TARGET_PROVIDES_LIBAUDIO := true
+
+# Use Audience A2220 chip
+BOARD_HAVE_AUDIENCE_A2220 := true
 
